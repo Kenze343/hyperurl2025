@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image and Get URL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Logo on top -->
+        <div class="logo">
+            <img src="https://media.discordapp.net/attachments/1341795059619729438/1342260674423689216/2CJSQAAAAAElFTkSuQmCC.png?ex=67b8fd2a&is=67b7abaa&hm=a010b7375732e74ce2445f29c3163b3b7796d46e9485384cdf2895258e8247a2&=&format=webp&quality=lossless&width=623&height=623" alt="Logo" />
+        </div>
+        
+        <div class="content">
+            <h1>Upload Your Image</h1>
+            <p class="instruction">Select an image file to upload, and we'll generate a URL for it!</p>
+
+            <div class="upload-area">
+                <!-- Hidden file input, will be triggered by button -->
+                <input type="file" id="fileInput" accept="image/*" style="display: none;" />
+                <button onclick="triggerFileInput()" id="uploadButton">Upload Image</button>
+            </div>
+
+            <div id="imagePreview" class="image-preview">
+                <p>Image preview will appear here.</p>
+            </div>
+
+            <div id="imageURL" class="image-url hidden">
+                <h2>Image URL:</h2>
+                <input type="text" id="urlInput" readonly />
+                <button onclick="copyToClipboard()" class="copy-button">Copy URL</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Made With ❤️ Created By VyperCodes Team</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

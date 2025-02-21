@@ -1,0 +1,220 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Logo style */
+.logo {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Main container styles */
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Content styling */
+.content {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.instruction {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.upload-area {
+    margin-bottom: 30px;
+}
+
+/* File input and button */
+#fileInput {
+    display: none;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#uploadButton {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+button:active {
+    background-color: #003f7f;
+}
+
+/* Image preview */
+.image-preview {
+    margin-top: 20px;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.image-preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.image-preview p {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+/* URL section */
+.image-url {
+    margin-top: 20px;
+}
+
+.image-url h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#urlInput {
+    padding: 10px;
+    width: 80%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+button.copy-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.copy-button:hover {
+    background-color: #218838;
+}
+
+button.copy-button:active {
+    background-color: #1c7430;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .upload-area input {
+        width: 80%;
+    }
+
+    #urlInput {
+        width: 90%;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: 'Arial', sans-serif;
+}
+
+.footer p {
+    margin: 0;
+    font-weight: 600; /* Bolder text */
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffd700; /* Highlight color */
+}
+
+/* Pulse animation for the heart */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.heart {
+    display: inline-block;
+    animation: pulse 1.5s ease-in-out infinite;
+}
